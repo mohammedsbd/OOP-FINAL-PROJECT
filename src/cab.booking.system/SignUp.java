@@ -119,4 +119,35 @@ JLabel lblUsername = new JLabel("Username :");
 	panel.setBounds(31, 30, 640, 310);
         panel.setBackground(Color.WHITE);
 	contentPane.add(panel);
+
+
+    public void actionPerformed(ActionEvent ae){
+        try{
+            Conn con = new Conn();
+            
+            if(ae.getSource() == b1){
+                
+                String username = textField.getText();
+                String name = textField_1.getText();
+		String password = textField_2.getText();
+		String question = (String) comboBox.getSelectedItem();
+		String answer = textField_3.getText();
+                
+                String sql = "insert into account values('"+username+"', '"+name+"', '"+password+"', '"+question+"', '"+answer+"')";
+		con.s.executeUpdate(sql);
+		JOptionPane.showMessageDialog(null, "Account Created Successfully ");
+                
+                new Login().setVisible(true);
+                setVisible(false);
+            }
+            if(ae.getSource() == b2){
+                this.setVisible(false);
+                new Login().setVisible(true);
+			
+            }
+        }catch(Exception e){
+                System.out.println(e);
+        }
+    }
+}
 }
