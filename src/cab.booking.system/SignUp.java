@@ -32,5 +32,9 @@ public class Signup extends JFrame implements ActionListener{
         contentPane.setBackground(Color.WHITE);
 	contentPane.setLayout(null);
     }
-
+JLabel lblUsername = new JLabel("Username :");
+	lblUsername.setForeground(Color.DARK_GRAY);
+	lblUsername.setFont(new Font("Tahoma", Font.BOLD, 14));
+	lblUsername.setBounds(99, 86, 92, 26);
+	contentPane.add(lblUsername);
 }
