@@ -61,4 +61,10 @@ JLabel lblUsername = new JLabel("Username :");
 			"Your child SuperHero?", "Your childhood Name ?" }));
 	comboBox.setBounds(265, 202, 148, 20);
 	contentPane.add(comboBox);
+
+    JLabel lblSecurityQuestion = new JLabel("Security Question :");
+	lblSecurityQuestion.setForeground(Color.DARK_GRAY);
+	lblSecurityQuestion.setFont(new Font("Tahoma", Font.BOLD, 14));
+	lblSecurityQuestion.setBounds(99, 197, 140, 26);
+	contentPane.add(lblSecurityQuestion);
 }
