@@ -111,4 +111,12 @@ JLabel lblUsername = new JLabel("Username :");
 	b2.setBackground(Color.BLACK);
         b2.setForeground(Color.WHITE);
 	contentPane.add(b2);
+
+    JPanel panel = new JPanel();
+	panel.setForeground(new Color(34, 139, 34));
+	panel.setBorder(new TitledBorder(new LineBorder(new Color(128, 128, 0), 2), "Create-Account",
+			TitledBorder.LEADING, TitledBorder.TOP, null, new Color(34, 139, 34)));
+	panel.setBounds(31, 30, 640, 310);
+        panel.setBackground(Color.WHITE);
+	contentPane.add(panel);
 }
