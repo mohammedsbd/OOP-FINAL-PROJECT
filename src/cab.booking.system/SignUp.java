@@ -37,4 +37,10 @@ JLabel lblUsername = new JLabel("Username :");
 	lblUsername.setFont(new Font("Tahoma", Font.BOLD, 14));
 	lblUsername.setBounds(99, 86, 92, 26);
 	contentPane.add(lblUsername);
+
+    JLabel lblName = new JLabel("Name :");
+	lblName.setForeground(Color.DARK_GRAY);
+	lblName.setFont(new Font("Tahoma", Font.BOLD, 14));
+	lblName.setBounds(99, 123, 92, 26);
+	contentPane.add(lblName);
 }
