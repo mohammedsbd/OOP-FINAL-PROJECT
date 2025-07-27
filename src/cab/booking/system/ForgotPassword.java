@@ -49,6 +49,21 @@ public class ForgotPassword extends JFrame implements ActionListener{
 	l5.setBounds(109, 224, 104, 21);
 	contentPane.add(l5);
 
+    t1 = new JTextField();
+	t1.setFont(new Font("Tahoma", Font.BOLD, 13));
+	t1.setForeground(new Color(105, 105, 105));
+	t1.setBounds(277, 88, 139, 20);
+	contentPane.add(t1);
+	t1.setColumns(10);
+
+    t2 = new JTextField();
+	t2.setEditable(false);
+	t2.setFont(new Font("Tahoma", Font.BOLD, 13));
+	t2.setForeground(new Color(165, 42, 42));
+	t2.setColumns(10);
+	t2.setBounds(277, 123, 139, 20);
+	contentPane.add(t2);
+
 
     }
 }
