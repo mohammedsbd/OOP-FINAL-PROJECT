@@ -43,4 +43,10 @@ JLabel lblUsername = new JLabel("Username :");
 	lblName.setFont(new Font("Tahoma", Font.BOLD, 14));
 	lblName.setBounds(99, 123, 92, 26);
 	contentPane.add(lblName);
+
+    JLabel lblPassword = new JLabel("Password :");
+	lblPassword.setForeground(Color.DARK_GRAY);
+	lblPassword.setFont(new Font("Tahoma", Font.BOLD, 14));
+	lblPassword.setBounds(99, 160, 92, 26);
+	contentPane.add(lblPassword);
 }
