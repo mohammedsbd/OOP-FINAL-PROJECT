@@ -11,4 +11,11 @@ public class Login extends JFrame implements ActionListener{
 	private JTextField textField;
 	private JPasswordField passwordField;
         private JButton b1,b2,b3;
+
+        public Login(){
+            setBackground(new Color(255, 255, 204));	
+        setBounds(550, 250, 700, 500);
+        setLayout(null);
+        getContentPane().setBackground(Color.WHITE);
+        }
 }
