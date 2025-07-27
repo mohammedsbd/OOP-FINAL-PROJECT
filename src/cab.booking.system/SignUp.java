@@ -12,5 +12,16 @@ import javax.swing.border.*;//to add border layout
 
 
 public class Signup extends JFrame implements ActionListener{
-    
+     private JPanel contentPane;
+    private JTextField textField;
+    private JTextField textField_1;
+    private JTextField textField_2;
+    private JTextField textField_3;
+    private JButton b1, b2;
+    private JComboBox comboBox;
+
+     public static void main(String[] args) {
+        new Signup().setVisible(true);
+    }
+
 }
