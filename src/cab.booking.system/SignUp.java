@@ -95,4 +95,20 @@ JLabel lblUsername = new JLabel("Username :");
 	textField_3.setColumns(10);
 	textField_3.setBounds(265, 239, 148, 20);
 	contentPane.add(textField_3);
+
+    b1 = new JButton("Create");
+	b1.addActionListener(this);
+	b1.setFont(new Font("Tahoma", Font.BOLD, 13));
+	b1.setBounds(140, 289, 100, 30);
+        b1.setBackground(Color.BLACK);
+        b1.setForeground(Color.WHITE);
+	contentPane.add(b1);
+
+	b2 = new JButton("Back");
+	b2.addActionListener(this);
+	b2.setFont(new Font("Tahoma", Font.BOLD, 13));
+	b2.setBounds(300, 289, 100, 30);
+	b2.setBackground(Color.BLACK);
+        b2.setForeground(Color.WHITE);
+	contentPane.add(b2);
 }
