@@ -9,54 +9,57 @@ import java.sql.*;
 import java.awt.event.*;
 
 public class ForgotPassword extends JFrame implements ActionListener{
+
     private JPanel contentPane;
     private JTextField t1,t2,t3,t4,t5;
     private JButton b1,b2,b3;
 
-      public static void main(String[] args) {
+    public static void main(String[] args) {
 	new ForgotPassword().setVisible(true);
     }
 
-    public ForgotPassword(){
-         setBounds(500, 200, 850, 400);
+    public ForgotPassword() {
+
+        setBounds(500, 200, 850, 400);
 	contentPane = new JPanel();
 	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
 	setContentPane(contentPane);
         contentPane.setBackground(Color.WHITE);
 	contentPane.setLayout(null);
 
-    JLabel l1 = new JLabel("Username");
+	JLabel l1 = new JLabel("Username");
 	l1.setFont(new Font("Tahoma", Font.BOLD, 13));
 	l1.setBounds(109, 83, 87, 29);
 	contentPane.add(l1);
 
-    JLabel l2 = new JLabel("Name");
+	JLabel l2 = new JLabel("Name");
 	l2.setFont(new Font("Tahoma", Font.BOLD, 13));
 	l2.setBounds(109, 122, 75, 21);
-	contentPane.add(l2)
-      
-    JLabel l3 = new JLabel("Your Security Question");
+	contentPane.add(l2);
+
+	JLabel l3 = new JLabel("Your Security Question");
 	l3.setFont(new Font("Tahoma", Font.BOLD, 13));
 	l3.setBounds(109, 154, 156, 27);
-	contentPane.add(l3)
-    JLabel l4 = new JLabel("Answer");
+	contentPane.add(l3);
+
+	JLabel l4 = new JLabel("Answer");
 	l4.setFont(new Font("Tahoma", Font.BOLD, 13));
 	l4.setBounds(109, 192, 104, 21);
 	contentPane.add(l4);
 
-    JLabel l5 = new JLabel("Password");
+	JLabel l5 = new JLabel("Password");
 	l5.setFont(new Font("Tahoma", Font.BOLD, 13));
 	l5.setBounds(109, 224, 104, 21);
 	contentPane.add(l5);
 
-    t1 = new JTextField();
+	t1 = new JTextField();
 	t1.setFont(new Font("Tahoma", Font.BOLD, 13));
 	t1.setForeground(new Color(105, 105, 105));
 	t1.setBounds(277, 88, 139, 20);
 	contentPane.add(t1);
 	t1.setColumns(10);
 
-    t2 = new JTextField();
+	t2 = new JTextField();
 	t2.setEditable(false);
 	t2.setFont(new Font("Tahoma", Font.BOLD, 13));
 	t2.setForeground(new Color(165, 42, 42));
@@ -64,7 +67,7 @@ public class ForgotPassword extends JFrame implements ActionListener{
 	t2.setBounds(277, 123, 139, 20);
 	contentPane.add(t2);
 
-    t3 = new JTextField();
+	t3 = new JTextField();
 	t3.setEditable(false);
 	t3.setFont(new Font("Tahoma", Font.BOLD, 12));
 	t3.setForeground(new Color(72, 61, 139));
@@ -86,9 +89,8 @@ public class ForgotPassword extends JFrame implements ActionListener{
 	t5.setColumns(10);
 	t5.setBounds(277, 225, 139, 20);
 	contentPane.add(t5);
-
-
-     ImageIcon c1 = new ImageIcon(ClassLoader.getSystemResource("cab/booking/system/icons/forgotpassword.jpg"));
+        
+        ImageIcon c1 = new ImageIcon(ClassLoader.getSystemResource("cab/booking/system/icons/forgotpassword.jpg"));
         Image i1 = c1.getImage().getScaledInstance(200, 200,Image.SCALE_DEFAULT);
         ImageIcon i2 = new ImageIcon(i1);
         
@@ -96,7 +98,7 @@ public class ForgotPassword extends JFrame implements ActionListener{
         l6.setBounds(560, 70, 200, 200);
         add(l6);
 
-        b1 = new JButton("Search");
+	b1 = new JButton("Search");
 	b1.addActionListener(this);
 	b1.setFont(new Font("Tahoma", Font.BOLD, 12));
 	b1.setBounds(428, 83, 80, 29);
@@ -120,11 +122,48 @@ public class ForgotPassword extends JFrame implements ActionListener{
         b3.setForeground(Color.WHITE);
 	contentPane.add(b3);
 
-    JPanel panel = new JPanel();
+	JPanel panel = new JPanel();
 	panel.setBounds(47, 45, 508, 281);
         panel.setBackground(Color.PINK);
 	contentPane.add(panel);
-
-
     }
+    
+    public void actionPerformed(ActionEvent ae){
+        try{
+            Conn con = new Conn();
+            if(ae.getSource() == b1){
+                String sql = "select * from account where username=?";
+		PreparedStatement st = con.c.prepareStatement(sql);
+
+		st.setString(1, t1.getText());
+		ResultSet rs = st.executeQuery();
+
+		while (rs.next()) {
+                    t2.setText(rs.getString("name"));
+                    t3.setText(rs.getString("question"));
+		}
+
+            }
+            if(ae.getSource() == b2){
+                String sql = "select * from account where answer=?";
+		PreparedStatement st = con.c.prepareStatement(sql);
+
+		st.setString(1, t4.getText());
+		ResultSet rs = st.executeQuery();
+
+		while (rs.next()) {
+                    	t5.setText(rs.getString("password"));
+		}
+
+            }
+            if(ae.getSource() == b3){
+                this.setVisible(false);
+		new Login().setVisible(true);
+			
+            }
+        }catch(Exception e){
+            
+        }
+    }
+
 }
