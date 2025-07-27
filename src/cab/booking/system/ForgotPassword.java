@@ -120,6 +120,11 @@ public class ForgotPassword extends JFrame implements ActionListener{
         b3.setForeground(Color.WHITE);
 	contentPane.add(b3);
 
+    JPanel panel = new JPanel();
+	panel.setBounds(47, 45, 508, 281);
+        panel.setBackground(Color.PINK);
+	contentPane.add(panel);
+
 
     }
 }
