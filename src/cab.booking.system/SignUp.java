@@ -75,4 +75,24 @@ JLabel lblUsername = new JLabel("Username :");
           JLabel l6 = new JLabel(i2);
         l6.setBounds(460, 70, 200, 200);
         add(l6);
+
+           textField = new JTextField();
+	textField.setBounds(265, 91, 148, 20);
+	contentPane.add(textField);
+	textField.setColumns(10);
+
+	textField_1 = new JTextField();
+	textField_1.setColumns(10);
+	textField_1.setBounds(265, 128, 148, 20);
+	contentPane.add(textField_1);
+
+        textField_2 = new JTextField();
+	textField_2.setColumns(10);
+	textField_2.setBounds(265, 165, 148, 20);
+	contentPane.add(textField_2);
+
+	textField_3 = new JTextField();
+	textField_3.setColumns(10);
+	textField_3.setBounds(265, 239, 148, 20);
+	contentPane.add(textField_3);
 }
