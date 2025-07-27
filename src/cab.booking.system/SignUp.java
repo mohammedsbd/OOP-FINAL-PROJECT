@@ -55,4 +55,10 @@ JLabel lblUsername = new JLabel("Username :");
 	lblAnswer.setFont(new Font("Tahoma", Font.BOLD, 14));
 	lblAnswer.setBounds(99, 234, 92, 26);
 	contentPane.add(lblAnswer);
+
+    comboBox = new JComboBox();
+	comboBox.setModel(new DefaultComboBoxModel(new String[] { "Your NickName?", "Your Lucky Number?",
+			"Your child SuperHero?", "Your childhood Name ?" }));
+	comboBox.setBounds(265, 202, 148, 20);
+	contentPane.add(comboBox);
 }
