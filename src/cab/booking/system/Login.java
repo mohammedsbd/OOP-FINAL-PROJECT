@@ -37,5 +37,17 @@ public class Login extends JFrame implements ActionListener{
 	textField = new JTextField();
 	textField.setBounds(420, 0, 157, 20);
 	l6.add(textField);
+
+    passwordField = new JPasswordField();
+	passwordField.setBounds(420, 40, 157, 20);
+	l6.add(passwordField)
+
+    b1 = new JButton("Login");
+	b1.addActionListener(this);
+                
+	b1.setForeground(new Color(46, 139, 87));
+	b1.setBackground(new Color(176, 224, 230));
+	b1.setBounds(324, 80, 113, 25);
+	l6.add(b1);
         }
 }
