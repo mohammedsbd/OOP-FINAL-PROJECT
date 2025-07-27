@@ -17,5 +17,14 @@ public class Login extends JFrame implements ActionListener{
         setBounds(550, 250, 700, 500);
         setLayout(null);
         getContentPane().setBackground(Color.WHITE);
+
+         ImageIcon c1 = new ImageIcon(ClassLoader.getSystemResource("cab/booking/System/icons/login.jpg"));
+        Image i1 = c1.getImage().getScaledInstance(700, 700,Image.SCALE_DEFAULT);
+        ImageIcon i2 = new ImageIcon(i1);
+        
+        
+        JLabel l6 = new JLabel(i2);
+        l6.setBounds(0, 50, 700, 450);
+        add(l6);
         }
 }
