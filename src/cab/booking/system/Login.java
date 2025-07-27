@@ -64,5 +64,12 @@ public class Login extends JFrame implements ActionListener{
 	b3.setBackground(new Color(253, 245, 230));
 	b3.setBounds(360, 120, 179, 25);
 	l6.add(b3);
+
+    	JLabel l5 = new JLabel("Trouble in Login?");
+	l5.setFont(new Font("Tahoma", Font.PLAIN, 15));
+	l5.setForeground(new Color(255, 0, 0));
+	l5.setBounds(240, 120, 110, 20);
+	l6.add(l5);
+
         }
 }
