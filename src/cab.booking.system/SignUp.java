@@ -24,4 +24,13 @@ public class Signup extends JFrame implements ActionListener{
         new Signup().setVisible(true);
     }
 
+    public Signup(){
+        setBounds(600, 250, 700, 406);
+	contentPane = new JPanel();
+	contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+	setContentPane(contentPane);
+        contentPane.setBackground(Color.WHITE);
+	contentPane.setLayout(null);
+    }
+
 }
