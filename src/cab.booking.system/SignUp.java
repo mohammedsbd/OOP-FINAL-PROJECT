@@ -67,4 +67,12 @@ JLabel lblUsername = new JLabel("Username :");
 	lblSecurityQuestion.setFont(new Font("Tahoma", Font.BOLD, 14));
 	lblSecurityQuestion.setBounds(99, 197, 140, 26);
 	contentPane.add(lblSecurityQuestion);
+
+     ImageIcon c1 = new ImageIcon(ClassLoader.getSystemResource("cab/booking/system/icons/signup.png"));
+        Image i1 = c1.getImage().getScaledInstance(200, 200,Image.SCALE_DEFAULT);
+        ImageIcon i2 = new ImageIcon(i1);
+
+          JLabel l6 = new JLabel(i2);
+        l6.setBounds(460, 70, 200, 200);
+        add(l6);
 }
