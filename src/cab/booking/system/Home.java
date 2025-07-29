@@ -15,3 +15,9 @@ public class Home extends JFrame {
         this.username = username;
         setForeground(Color.CYAN);
         setLayout(null); 
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("cab/booking/system/icons/home.jpg"));
+        Image i2 = i1.getImage().getScaledInstance(1950, 1250, Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2); 
+        JLabel NewLabel = new JLabel(i3);
+        NewLabel.setBounds(0, 0, 1950, 1000); 
+        add(NewLabel);
