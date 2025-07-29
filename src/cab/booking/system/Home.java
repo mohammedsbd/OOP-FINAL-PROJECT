@@ -10,3 +10,8 @@ public class Home extends JFrame {
     public static void main(String[] args) {
         new Home("").setVisible(true);
     }
+    public Home(String username) {
+        super("Cab Booking System");
+        this.username = username;
+        setForeground(Color.CYAN);
+        setLayout(null); 
