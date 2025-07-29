@@ -48,3 +48,13 @@ public class AddCustomer extends JFrame {
                 l1.setBounds(450,40,450,420);
                 add(l1);
 		
+		JLabel lblName = new JLabel("NEW CUSTOMER FORM");
+		lblName.setFont(new Font("Yu Mincho", Font.PLAIN, 20));
+		lblName.setBounds(118, 11, 260, 53);
+		contentPane.add(lblName);
+                
+                JLabel l3 = new JLabel("Username :");
+		l3.setBounds(35, 70, 200, 14);
+		contentPane.add(l3);
+                
+                t7 = new JTextField();
