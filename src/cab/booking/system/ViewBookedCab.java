@@ -48,3 +48,8 @@ public class ViewBookedCab extends JFrame {
                 la1.setBounds(450,150,550,350);
                 add(la1);
     
+
+                 JLabel lblName = new JLabel("VIEW BOOKED CAB DETAILS");
+    lblName.setFont(new Font("Yu Mincho", Font.PLAIN, 20));
+    lblName.setBounds(88, 1, 350, 53);
+    contentPane.add(lblName);
