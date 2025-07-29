@@ -41,3 +41,32 @@ public static void main(String[] args){
   Destination.setFont(new Font("Tahoma", Font.PLAIN, 19));
   Destination.setBounds(350, 100, 150, 27);
   add(Destination);
+
+
+   c1 = new Choice();
+        c1.setBounds(150, 100, 150, 27);
+        add(c1);
+        
+  c2 = new Choice();
+        c2.setBounds(500, 100, 150, 27);
+        add(c2);
+        
+        JLabel l9 = new JLabel("Name : ");
+  l9.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l9.setBounds(50, 150, 250, 27);
+  add(l9);
+        
+        JLabel l10 = new JLabel("");
+  l10.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l10.setBounds(200, 150, 150, 27);
+  add(l10);
+        
+        JLabel l11 = new JLabel("Username : ");
+  l11.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l11.setBounds(50, 200, 150, 27);
+  add(l11);
+        
+        JLabel l12 = new JLabel("");
+  l12.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l12.setBounds(200, 200, 350, 27);
+  add(l12);
