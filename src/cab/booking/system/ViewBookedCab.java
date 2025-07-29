@@ -34,3 +34,17 @@ public class ViewBookedCab extends JFrame {
       }
     });
   }
+
+  public ViewBookedCab(String username)  {
+    setBounds(450, 220, 1050, 600);
+    contentPane = new JPanel();
+    setContentPane(contentPane);
+    contentPane.setLayout(null);
+                
+                ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("cab/booking/system/icons/intracabdetails.jpg"));
+                Image i3 = i1.getImage().getScaledInstance(500, 450,Image.SCALE_DEFAULT);
+                ImageIcon i2 = new ImageIcon(i3);
+                JLabel la1 = new JLabel(i2);
+                la1.setBounds(450,150,550,350);
+                add(la1);
+    
