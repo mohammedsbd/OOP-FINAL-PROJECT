@@ -102,3 +102,20 @@ public class ViewBookedCab extends JFrame {
                 JLabel l6 = new JLabel();
     l6.setBounds(271, 270, 200, 14);
     contentPane.add(l6);
+
+
+     JLabel lblReserveRoomNumber = new JLabel("Phone :");
+    lblReserveRoomNumber.setBounds(35, 310, 200, 14);
+    contentPane.add(lblReserveRoomNumber);
+                
+                JLabel l7 = new JLabel();
+    l7.setBounds(271, 310, 200, 14);
+    contentPane.add(l7);
+             
+    JLabel lblCheckInStatus = new JLabel("Address :");
+    lblCheckInStatus.setBounds(35, 350, 200, 14);
+    contentPane.add(lblCheckInStatus);
+                
+                JLabel l8 = new JLabel();
+    l8.setBounds(271, 350, 200, 14);
+    contentPane.add(l8);
