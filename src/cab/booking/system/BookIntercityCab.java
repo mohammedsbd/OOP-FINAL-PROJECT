@@ -17,3 +17,15 @@ public class BookIntercityCab extends JFrame{
 public static void main(String[] args){
         new BookIntercityCab("");
     }
+
+    public BookIntercityCab(String username){
+        
+        setTitle("Book Cab");
+  getContentPane().setBackground(Color.WHITE);
+  setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        
+        ReservationDetails = new JLabel("BOOK INTERCITY CAB");
+  ReservationDetails.setForeground(Color.BLUE);
+  ReservationDetails.setFont(new Font("Tahoma", Font.PLAIN, 31));
+  ReservationDetails.setBounds(280, 27, 359, 31);
+  add(ReservationDetails);
