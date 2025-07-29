@@ -28,3 +28,13 @@ public class AddCustomer extends JFrame {
 					AddCustomer frame = new AddCustomer("");
 					frame.setVisible(true);
 				} catch (Exception e) {
+					e.printStackTrace();
+				}
+			}
+		});
+	}
+
+	public AddCustomer(String username) throws SQLException {
+		System.out.println(username);
+                setBounds(500, 220, 850, 550);
+		contentPane = new JPanel();
