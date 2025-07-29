@@ -29,3 +29,15 @@ public static void main(String[] args){
   ReservationDetails.setFont(new Font("Tahoma", Font.PLAIN, 31));
   ReservationDetails.setBounds(280, 27, 359, 31);
   add(ReservationDetails);
+
+  setLayout(null);
+    
+  Source = new JLabel("SOURCE");
+  Source.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  Source.setBounds(60, 100, 70, 27);
+  add(Source);
+  
+        Destination = new JLabel("DESTINATION");
+  Destination.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  Destination.setBounds(350, 100, 150, 27);
+  add(Destination);
