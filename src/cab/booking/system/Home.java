@@ -129,3 +129,8 @@ public class Home extends JFrame {
         m7.add(mi15);
 
         mi15.addActionListener(ae -> new About().setVisible(true));
+        setExtendedState(JFrame.MAXIMIZED_BOTH); 
+        setVisible(true);
+        getContentPane().setBackground(Color.WHITE);
+    }
+}
