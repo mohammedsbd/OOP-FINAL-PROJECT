@@ -98,3 +98,23 @@ public class AddCustomer extends JFrame {
                 r1.setBackground(Color.WHITE);
                 r1.setBounds(271, 230, 80, 12);
                 add(r1);
+                
+                r2 = new JRadioButton("Female");
+                r2.setFont(new Font("Raleway", Font.BOLD, 14));
+                r2.setBackground(Color.WHITE);
+                r2.setBounds(350, 230, 100, 12);
+		add(r2);
+                
+		JLabel lblCountry = new JLabel("Country :");
+		lblCountry.setBounds(35, 270, 200, 14);
+		contentPane.add(lblCountry);
+                
+                t3 = new JTextField();
+		t3.setBounds(271, 270, 150, 20);
+		contentPane.add(t3);
+		t3.setColumns(10);
+		
+		JLabel lblReserveRoomNumber = new JLabel("Permanent Address :");
+		lblReserveRoomNumber.setBounds(35, 310, 200, 14);
+		contentPane.add(lblReserveRoomNumber);
+                
