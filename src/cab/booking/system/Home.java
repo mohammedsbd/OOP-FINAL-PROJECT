@@ -84,3 +84,19 @@ public class Home extends JFrame {
 
         mi16.addActionListener(ae -> new Trucking(username).setVisible(true));
         mi17.addActionListener(ae -> new ViewTruckingDetails(username).setVisible(true));
+        JMenu m9 = new JMenu("BILL");
+        m9.setForeground(Color.BLUE);
+        menuBar.add(m9);
+
+        JMenuItem mi18 = new JMenuItem("CHECK BILL");
+        m9.add(mi18);
+
+        mi18.addActionListener(ae -> new CheckBill(username).setVisible(true));
+        JMenu m5 = new JMenu("PAYMENT");
+        m5.setForeground(Color.RED);
+        menuBar.add(m5);
+
+        JMenuItem mi12 = new JMenuItem("PAY THE PAYTM");
+        m5.add(mi12);
+
+        mi12.addActionListener(ae -> new Payment().setVisible(true));
