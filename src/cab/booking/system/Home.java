@@ -100,3 +100,24 @@ public class Home extends JFrame {
         m5.add(mi12);
 
         mi12.addActionListener(ae -> new Payment().setVisible(true));
+        JMenu m6 = new JMenu("UTILITY");
+        m6.setForeground(Color.BLUE);
+        menuBar.add(m6);
+
+        JMenuItem mi13 = new JMenuItem("NOTEPAD");
+        JMenuItem mi14 = new JMenuItem("CALCULATOR");
+
+        m6.add(mi13);
+        m6.add(mi14);
+
+        mi13.addActionListener(ae -> {
+            try {
+                Runtime.getRuntime().exec("notepad.exe");
+            } catch (Exception e) {}
+        });
+
+        mi14.addActionListener(ae -> {
+            try {
+                Runtime.getRuntime().exec("calc.exe");
+            } catch (Exception e) {}
+        });
