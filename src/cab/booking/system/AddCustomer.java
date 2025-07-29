@@ -168,3 +168,13 @@ public class AddCustomer extends JFrame {
                            
                           
                             try{
+	    			String s9 = t7.getText(); //username
+                                String s1 = (String)comboBox.getSelectedItem(); 
+	    			String s2 =  t1.getText();
+	    			String s3 =  t2.getText();
+                                String s4 =  radio;
+	    			String s5 =  t3.getText();
+	    			String s7 =  t5.getText();  //address
+                                String s8 =  t6.getText();
+                                String s10 = t8.getText(); //email
+                                
