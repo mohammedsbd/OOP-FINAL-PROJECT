@@ -178,3 +178,13 @@ public class AddCustomer extends JFrame {
                                 String s8 =  t6.getText();
                                 String s10 = t8.getText(); //email
                                 
+                                String q1 = "insert into customer values('"+s9+"','"+s1+"','"+s2+"','"+s3+"','"+s4+"','"+s5+"','"+s7+"','"+s8+"','"+s10+"')";
+                                c.s.executeUpdate(q1);
+                                
+	    			JOptionPane.showMessageDialog(null, "Customer Added Successfully");
+                                setVisible(false);
+	    		}catch(SQLException e1){
+	    			System.out.println(e1.getMessage());
+	    		}
+		    		catch(NumberFormatException s){
+		    			JOptionPane.showMessageDialog(null, "Please enter a valid Number");
