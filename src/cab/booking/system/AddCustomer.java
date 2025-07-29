@@ -118,3 +118,13 @@ public class AddCustomer extends JFrame {
 		lblReserveRoomNumber.setBounds(35, 310, 200, 14);
 		contentPane.add(lblReserveRoomNumber);
                 
+                t5 = new JTextField();
+		t5.setBounds(271, 310, 150, 20);
+		contentPane.add(t5);
+		t5.setColumns(10);
+           	
+		JLabel lblCheckInStatus = new JLabel("Phone :");
+		lblCheckInStatus.setBounds(35, 350, 200, 14);
+		contentPane.add(lblCheckInStatus);
+                
+                t6 = new JTextField();
