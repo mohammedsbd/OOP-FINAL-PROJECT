@@ -21,3 +21,8 @@ public class Home extends JFrame {
         JLabel NewLabel = new JLabel(i3);
         NewLabel.setBounds(0, 0, 1950, 1000); 
         add(NewLabel);
+        JLabel l1 = new JLabel("Transpo Cab");
+        l1.setForeground(Color.WHITE);
+        l1.setFont(new Font("Tahoma", Font.PLAIN, 55));
+        l1.setBounds(780, 60, 1000, 100);
+        NewLabel.add(l1);
