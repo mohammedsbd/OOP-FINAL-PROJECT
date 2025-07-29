@@ -148,3 +148,13 @@ public class AddCustomer extends JFrame {
                     while(rs.next()){
                         t7.setText(rs.getString("username"));  
                         t2.setText(rs.getString("name"));
+                    }
+                }catch(Exception e){ }
+		
+		
+
+		JButton btnNewButton = new JButton("Add");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+                            Conn c = new Conn();
+                            String radio = null;
