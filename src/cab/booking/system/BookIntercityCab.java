@@ -131,3 +131,22 @@ public static void main(String[] args){
         show.setForeground(Color.WHITE);
   show.setBounds(370, 250, 90, 22);
   add(show);
+
+
+       ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("cab/booking/System/icons/intracab.png"));
+        Image i2 = i1.getImage().getScaledInstance(300, 300,Image.SCALE_DEFAULT);
+        ImageIcon i3 = new ImageIcon(i2);
+        
+        JLabel l16 = new JLabel(i3);
+        l16.setBounds(480, 150, 300, 300);
+        add(l16);
+        
+        JLabel l13 = new JLabel("Reference Number : ");
+  l13.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l13.setBounds(50, 450, 250, 27);
+  add(l13);
+        
+        JLabel l14 = new JLabel();
+  l14.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l14.setBounds(250, 450, 250, 27);
+  add(l14);
