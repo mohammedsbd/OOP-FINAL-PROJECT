@@ -98,3 +98,38 @@ public class ViewCustomer extends JFrame {
 		
 		lblCleanStatus = new JLabel("Id Type");
 		lblCleanStatus.setBounds(110, 15, 76, 14);
+		contentPane.add(lblCleanStatus);
+		
+		lblNewLabel = new JLabel("Number");
+		lblNewLabel.setBounds(220, 15, 46, 14);
+		contentPane.add(lblNewLabel);
+		
+		lblNewLabel_1 = new JLabel("Name");
+		lblNewLabel_1.setBounds(320, 15, 76, 14);
+		contentPane.add(lblNewLabel_1);
+
+		
+		lblId = new JLabel("Gender");
+		lblId.setBounds(420, 15, 90, 14);
+		contentPane.add(lblId);
+                
+                JLabel l3 = new JLabel("Country");
+		l3.setBounds(520, 15, 90, 14);
+		contentPane.add(l3);
+                
+                JLabel l4 = new JLabel("Address");
+		l4.setBounds(620, 15, 90, 14);
+		contentPane.add(l4);
+                
+                JLabel l5 = new JLabel("Phone");
+		l5.setBounds(720, 15, 90, 14);
+		contentPane.add(l5);
+                
+                JLabel l6 = new JLabel("Email");
+		l6.setBounds(820, 15, 90, 14);
+		contentPane.add(l6);
+                
+                getContentPane().setBackground(Color.WHITE);
+	}
+
+}
