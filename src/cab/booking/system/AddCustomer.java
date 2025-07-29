@@ -68,3 +68,13 @@ public class AddCustomer extends JFrame {
                 
                 comboBox = new JComboBox(new String[] {"Passport", "Aadhar Card", "Voter Id", "Driving license"});
 		comboBox.setBounds(271, 110, 150, 20);
+		contentPane.add(comboBox);
+                
+                JLabel l2 = new JLabel("Number :");
+		l2.setBounds(35, 150, 200, 14);
+		contentPane.add(l2);
+                
+                t1 = new JTextField();
+		t1.setBounds(271, 150, 150, 20);
+		contentPane.add(t1);
+		t1.setColumns(10);
