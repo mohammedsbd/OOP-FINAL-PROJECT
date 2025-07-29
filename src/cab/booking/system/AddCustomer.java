@@ -158,3 +158,13 @@ public class AddCustomer extends JFrame {
 			public void actionPerformed(ActionEvent e) {
                             Conn c = new Conn();
                             String radio = null;
+                            
+                            if(r1.isSelected()){ 
+                                radio = "Male";
+                            }
+                            else if(r2.isSelected()){ 
+                                radio = "Female";
+                            }
+                           
+                          
+                            try{
