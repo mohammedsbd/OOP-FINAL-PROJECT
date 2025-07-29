@@ -58,3 +58,43 @@ public class ViewCustomer extends JFrame {
                 JLabel l1 = new JLabel(i2);
                 l1.setBounds(0,450,626,201);
                 add(l1);
+                
+                ImageIcon i4  = new ImageIcon(ClassLoader.getSystemResource("cab/booking/system/icons/viewall.jpg"));
+                Image i5 = i4.getImage().getScaledInstance(626, 201,Image.SCALE_DEFAULT);
+                ImageIcon i6 = new ImageIcon(i5);
+                JLabel l2 = new JLabel(i6);
+                l2.setBounds(615,450,626,201);
+                add(l2);
+                
+		
+		table = new JTable();
+		table.setBounds(0, 40, 900, 350);
+		contentPane.add(table);
+                
+                try{
+                    Conn c = new Conn();
+                        String displayCustomersql = "select * from customer";
+                        ResultSet rs = c.s.executeQuery(displayCustomersql);
+                        table.setModel(DbUtils.resultSetToTableModel(rs));
+                }
+                catch(Exception e1){
+                        e1.printStackTrace();
+                }
+		
+		JButton btnNewButton = new JButton("Back");
+		btnNewButton.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				setVisible(false);
+			}
+		});
+		btnNewButton.setBounds(390, 400, 120, 30);
+                btnNewButton.setBackground(Color.BLACK);
+                btnNewButton.setForeground(Color.WHITE);
+		contentPane.add(btnNewButton);
+		
+		lblAvailability = new JLabel("Username");
+		lblAvailability.setBounds(10, 15, 69, 14);
+		contentPane.add(lblAvailability);
+		
+		lblCleanStatus = new JLabel("Id Type");
+		lblCleanStatus.setBounds(110, 15, 76, 14);
