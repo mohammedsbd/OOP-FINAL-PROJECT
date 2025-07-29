@@ -78,3 +78,15 @@ public class AddCustomer extends JFrame {
 		t1.setBounds(271, 150, 150, 20);
 		contentPane.add(t1);
 		t1.setColumns(10);
+		
+		JLabel lblName_1 = new JLabel("Name :");
+		lblName_1.setBounds(35, 190, 200, 14);
+		contentPane.add(lblName_1);
+		
+		t2 = new JTextField();
+		t2.setBounds(271, 190, 150, 20);
+		contentPane.add(t2);
+		t2.setColumns(10);
+
+
+        
