@@ -28,3 +28,21 @@ public class Home extends JFrame {
         NewLabel.add(l1);
         JMenuBar menuBar = new JMenuBar();
         setJMenuBar(menuBar);
+        JMenu m1 = new JMenu("CUSTOMER");
+        m1.setForeground(Color.BLUE);
+        menuBar.add(m1);
+
+        JMenuItem mi1 = new JMenuItem("ADD CUSTOMER");
+        JMenuItem mi2 = new JMenuItem("UPDATE CUSTOMER DETAIL");
+        JMenuItem mi3 = new JMenuItem("VIEW CUSTOMER DETAILS");
+        JMenuItem mi4 = new JMenuItem("DELETE CUSTOMER DETAILS");
+
+        m1.add(mi1);
+        m1.add(mi2);
+        m1.add(mi3);
+        m1.add(mi4);
+
+        mi1.addActionListener(ae -> new AddCustomer(username).setVisible(true));
+        mi2.addActionListener(ae -> new UpdateCustomer(username).setVisible(true));
+        mi3.addActionListener(ae -> new ViewCustomer().setVisible(true));
+        mi4.addActionListener(ae -> new DeleteCustomer().setVisible(true));
