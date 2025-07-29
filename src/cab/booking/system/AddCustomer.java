@@ -38,3 +38,13 @@ public class AddCustomer extends JFrame {
 		System.out.println(username);
                 setBounds(500, 220, 850, 550);
 		contentPane = new JPanel();
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+                
+                ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("cab/booking/system/icons/newcustomer.jpg"));
+                Image i3 = i1.getImage().getScaledInstance(450, 500,Image.SCALE_DEFAULT);
+                ImageIcon i2 = new ImageIcon(i3);
+                JLabel l1 = new JLabel(i2);
+                l1.setBounds(450,40,450,420);
+                add(l1);
+		
