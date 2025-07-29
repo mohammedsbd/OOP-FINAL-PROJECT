@@ -85,3 +85,26 @@ public static void main(String[] args){
                 l10.setText(rs.getString("name"));
                 l12.setText(username);
             }
+
+            rs.close();
+        }catch(SQLException e){}
+        
+        
+        JLabel l1 = new JLabel("Type : ");
+  l1.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l1.setBounds(50, 250, 150, 27);
+  add(l1);
+        
+        Choice c3 = new Choice();
+        c3.add("Micro");
+        c3.add("Mini");
+        c3.add("SUV");
+        c3.setBounds(200, 250, 150, 27);
+        add(c3);
+        
+        
+  show = new JButton("DETAILS");
+        show.setBackground(Color.BLACK);
+        show.setForeground(Color.WHITE);
+  show.setBounds(370, 250, 90, 22);
+  add(show);
