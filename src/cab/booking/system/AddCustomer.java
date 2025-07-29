@@ -138,3 +138,13 @@ public class AddCustomer extends JFrame {
 		
 		t8 = new JTextField();
 		t8.setBounds(271, 390, 150, 20);
+		contentPane.add(t8);
+		t8.setColumns(10);
+		
+		
+                try{
+                    Conn c = new Conn();
+                    ResultSet rs = c.s.executeQuery("select * from account where username = '"+username+"'");
+                    while(rs.next()){
+                        t7.setText(rs.getString("username"));  
+                        t2.setText(rs.getString("name"));
