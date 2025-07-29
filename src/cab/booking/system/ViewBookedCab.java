@@ -53,3 +53,52 @@ public class ViewBookedCab extends JFrame {
     lblName.setFont(new Font("Yu Mincho", Font.PLAIN, 20));
     lblName.setBounds(88, 1, 350, 53);
     contentPane.add(lblName);
+
+       JLabel lb3 = new JLabel("Customer Name :");
+    lb3.setBounds(35, 70, 200, 14);
+    contentPane.add(lb3);
+                
+                JLabel l1 = new JLabel();
+    l1.setBounds(271, 70, 200, 14);
+    contentPane.add(l1);
+                
+                JLabel lblId = new JLabel("Driver Name :");
+    lblId.setBounds(35, 110, 200, 14);
+    contentPane.add(lblId);
+                
+                JLabel l2 = new JLabel();
+    l2.setBounds(271, 110, 200, 14);
+    contentPane.add(l2);
+                
+                JLabel lb2 = new JLabel("Source :");
+    lb2.setBounds(35, 150, 200, 14);
+    contentPane.add(lb2);
+                
+                JLabel l3 = new JLabel();
+    l3.setBounds(271, 150, 200, 14);
+    contentPane.add(l3);
+    
+    JLabel lblName_1 = new JLabel("Destination :");
+    lblName_1.setBounds(35, 190, 200, 14);
+    contentPane.add(lblName_1);
+    
+    JLabel l4 = new JLabel();
+    l4.setBounds(271, 190, 200, 14);
+    contentPane.add(l4);
+
+                
+    JLabel lblGender = new JLabel("Car :");
+    lblGender.setBounds(35, 230, 200, 14);
+    contentPane.add(lblGender);
+                
+                JLabel l5 = new JLabel();
+    l5.setBounds(271, 230, 200, 14);
+    contentPane.add(l5);
+                
+    JLabel lblCountry = new JLabel("ID :");
+    lblCountry.setBounds(35, 270, 200, 14);
+    contentPane.add(lblCountry);
+                
+                JLabel l6 = new JLabel();
+    l6.setBounds(271, 270, 200, 14);
+    contentPane.add(l6);
