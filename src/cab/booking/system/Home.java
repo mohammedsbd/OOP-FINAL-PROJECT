@@ -121,3 +121,11 @@ public class Home extends JFrame {
                 Runtime.getRuntime().exec("calc.exe");
             } catch (Exception e) {}
         });
+        JMenu m7 = new JMenu("ABOUT");
+        m7.setForeground(Color.RED);
+        menuBar.add(m7);
+
+        JMenuItem mi15 = new JMenuItem("ABOUT");
+        m7.add(mi15);
+
+        mi15.addActionListener(ae -> new About().setVisible(true));
