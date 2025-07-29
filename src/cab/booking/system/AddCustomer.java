@@ -128,3 +128,13 @@ public class AddCustomer extends JFrame {
 		contentPane.add(lblCheckInStatus);
                 
                 t6 = new JTextField();
+		t6.setBounds(271, 350, 150, 20);
+		contentPane.add(t6);
+		t6.setColumns(10);
+		
+		JLabel lblDeposite = new JLabel("Email :");
+		lblDeposite.setBounds(35, 390, 200, 14);
+		contentPane.add(lblDeposite);
+		
+		t8 = new JTextField();
+		t8.setBounds(271, 390, 150, 20);
