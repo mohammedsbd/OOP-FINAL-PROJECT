@@ -38,3 +38,23 @@ public class ViewCustomer extends JFrame {
 				} catch (Exception e) {
 					e.printStackTrace();
 				}
+			}
+		});
+	}
+
+        
+	public ViewCustomer() throws SQLException {
+		//conn = Javaconnect.getDBConnection();
+		setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+		setBounds(500, 220, 900, 680);
+		contentPane = new JPanel();
+		contentPane.setBorder(new EmptyBorder(5, 5, 5, 5));
+		setContentPane(contentPane);
+		contentPane.setLayout(null);
+                
+                ImageIcon i1  = new ImageIcon(ClassLoader.getSystemResource("cab/booking/system/icons/viewall.jpg"));
+                Image i3 = i1.getImage().getScaledInstance(626, 201,Image.SCALE_DEFAULT);
+                ImageIcon i2 = new ImageIcon(i3);
+                JLabel l1 = new JLabel(i2);
+                l1.setBounds(0,450,626,201);
+                add(l1);
