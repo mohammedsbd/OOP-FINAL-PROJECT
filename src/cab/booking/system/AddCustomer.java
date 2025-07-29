@@ -188,3 +188,25 @@ public class AddCustomer extends JFrame {
 	    		}
 		    		catch(NumberFormatException s){
 		    			JOptionPane.showMessageDialog(null, "Please enter a valid Number");
+			}
+			}
+		});
+		btnNewButton.setBounds(100, 430, 120, 30);
+                btnNewButton.setBackground(Color.BLACK);
+                btnNewButton.setForeground(Color.WHITE);
+		contentPane.add(btnNewButton);
+		
+		JButton btnExit = new JButton("Back");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+                            setVisible(false);
+			}
+		}); 
+		btnExit.setBounds(260, 430, 120, 30);
+                btnExit.setBackground(Color.BLACK);
+                btnExit.setForeground(Color.WHITE);
+		contentPane.add(btnExit);
+                
+                getContentPane().setBackground(Color.WHITE);
+	}
+}
