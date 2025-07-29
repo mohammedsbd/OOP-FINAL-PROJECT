@@ -70,3 +70,18 @@ public static void main(String[] args){
   l12.setFont(new Font("Tahoma", Font.PLAIN, 19));
   l12.setBounds(200, 200, 350, 27);
   add(l12);
+
+
+  try{
+            Conn c = new Conn();
+            ResultSet rs = c.s.executeQuery("select DISTINCT source, destination from intercity");
+            while(rs.next()){
+                c1.add(rs.getString("source"));
+                c2.add(rs.getString("destination"));
+            }
+            
+            rs = c.s.executeQuery("select * from account where username = '"+username+"'");
+            while(rs.next()){
+                l10.setText(rs.getString("name"));
+                l12.setText(username);
+            }
