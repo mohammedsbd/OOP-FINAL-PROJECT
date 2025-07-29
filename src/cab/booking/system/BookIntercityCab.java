@@ -1,3 +1,4 @@
+サスケ, [7/29/2025 2:53 PM]
 package cab.booking.system;
 
 
@@ -7,17 +8,17 @@ import java.sql.*;
 import java.util.Random;
 import javax.swing.*;
 
+public class BookIntercityCab extends JFrame{  
 
-public class BookIntercityCab extends JFrame{
-     JTable table;
+    JTable table;
     JLabel ReservationDetails,Source,Destination;
     JButton show, b1, b2;
     Choice c1, c2;
-}
-public static void main(String[] args){
+    
+    public static void main(String[] args){
         new BookIntercityCab("");
     }
-
+    
     public BookIntercityCab(String username){
         
         setTitle("Book Cab");
@@ -30,6 +31,7 @@ public static void main(String[] args){
   ReservationDetails.setBounds(280, 27, 359, 31);
   add(ReservationDetails);
 
+  
   setLayout(null);
     
   Source = new JLabel("SOURCE");
@@ -41,9 +43,9 @@ public static void main(String[] args){
   Destination.setFont(new Font("Tahoma", Font.PLAIN, 19));
   Destination.setBounds(350, 100, 150, 27);
   add(Destination);
-
-
-   c1 = new Choice();
+    
+  
+  c1 = new Choice();
         c1.setBounds(150, 100, 150, 27);
         add(c1);
         
@@ -70,9 +72,9 @@ public static void main(String[] args){
   l12.setFont(new Font("Tahoma", Font.PLAIN, 19));
   l12.setBounds(200, 200, 350, 27);
   add(l12);
-
-
-  try{
+  
+        
+        try{
             Conn c = new Conn();
             ResultSet rs = c.s.executeQuery("select DISTINCT source, destination from intercity");
             while(rs.next()){
@@ -86,7 +88,8 @@ public static void main(String[] args){
                 l12.setText(username);
             }
 
-            rs.close();
+サスケ, [7/29/2025 2:53 PM]
+rs.close();
         }catch(SQLException e){}
         
         
@@ -108,32 +111,38 @@ public static void main(String[] args){
         show.setForeground(Color.WHITE);
   show.setBounds(370, 250, 90, 22);
   add(show);
-
-  rs.close();
-        }catch(SQLException e){}
+            
+        JLabel l3 = new JLabel("Car : ");
+  l3.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l3.setBounds(50, 300, 150, 27);
+  add(l3);
         
+        JLabel l4 = new JLabel("");
+  l4.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l4.setBounds(200, 300, 450, 27);
+  add(l4);
         
-        JLabel l1 = new JLabel("Type : ");
-  l1.setFont(new Font("Tahoma", Font.PLAIN, 19));
-  l1.setBounds(50, 250, 150, 27);
-  add(l1);
+        JLabel l5 = new JLabel("Driver : ");
+  l5.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l5.setBounds(50, 350, 250, 27);
+  add(l5);
         
-        Choice c3 = new Choice();
-        c3.add("Micro");
-        c3.add("Mini");
-        c3.add("SUV");
-        c3.setBounds(200, 250, 150, 27);
-        add(c3);
+        JLabel l6 = new JLabel("");
+  l6.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l6.setBounds(200, 350, 450, 27);
+  add(l6);
         
+        JLabel l7 = new JLabel("Price : ");
+  l7.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l7.setBounds(50, 400, 150, 27);
+  add(l7);
         
-  show = new JButton("DETAILS");
-        show.setBackground(Color.BLACK);
-        show.setForeground(Color.WHITE);
-  show.setBounds(370, 250, 90, 22);
-  add(show);
-
-
-       ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("cab/booking/System/icons/intracab.png"));
+        JLabel l8 = new JLabel("");
+  l8.setFont(new Font("Tahoma", Font.PLAIN, 19));
+  l8.setBounds(200, 400, 450, 27);
+  add(l8);
+        
+        ImageIcon i1 = new ImageIcon(ClassLoader.getSystemResource("cab/booking/System/icons/intracab.png"));
         Image i2 = i1.getImage().getScaledInstance(300, 300,Image.SCALE_DEFAULT);
         ImageIcon i3 = new ImageIcon(i2);
         
@@ -150,3 +159,90 @@ public static void main(String[] args){
   l14.setFont(new Font("Tahoma", Font.PLAIN, 19));
   l14.setBounds(250, 450, 250, 27);
   add(l14);
+    
+        Random r = new Random();
+        l14.setText(""+Math.abs(r.nextInt() % 100000));
+    
+  show.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+    try{
+                    String src  = c1.getSelectedItem();
+                    String dst  = c2.getSelectedItem();
+                    
+                    Conn c = new Conn();
+                    
+                    String str = "select * from customer where username = '"+username+"'";
+                    String str2 = "select * from intercity where destination = '"+dst+"' AND type = '"+c3.getSelectedItem()+"'";
+                    ResultSet rs = c.s.executeQuery(str2);
+                    if(rs.next()){
+                        l6.setText(rs.getString("driver"));
+                        l8.setText("Rs " + rs.getString("price"));
+                        l4.setText(rs.getString("car"));
+                    }
+                    
+                    rs = c.s.executeQuery(str);
+                    if(rs.next()){
+                        l10.setText(rs.getString("name"));
+                    }
+                    l12.setText(username);
+                    
+          
+    }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+  });
+        
+        b1 = new JButton("Book CAB");
+        b1.setBackground(Color.BLACK);
+        b1.setForeground(Color.WHITE);
+        b1.setBounds(50, 500, 150, 30);
+        add(b1);
+        
+        b1.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+    try{
+                    String src  = c1.getSelectedItem();
+                    String dst  = c2.getSelectedItem();
+                    String type = c3.getSelectedItem();
+                    String price = l8.getText();
+                    String car = l4.getText();
+                    String driver = l6.getText();
+                    String name = l10.getText();
+                    String ref = l14.getText()[7/29/2025 2:53 PM]
+Conn c = new Conn();
+                    
+                    c.s.executeUpdate("delete from interCab");
+                    
+                    String str = "insert into interCab values('"+username+"', '"+driver+"' ,'"+src+"','"+dst+"','"+type+"', '"+car+"','"+price+"', '"+ref+"')";
+                    c.s.executeUpdate(str);
+                    
+                    JOptionPane.showMessageDialog(null, "Cab Booked Successfully");
+                    setVisible(false);
+                    
+    }catch(Exception e){
+                    e.printStackTrace();
+                }
+            }
+  });
+        
+        
+        b2 = new JButton("Cancel");
+        b2.setBackground(Color.BLACK);
+        b2.setForeground(Color.WHITE);
+        b2.setBounds(250, 500, 150, 30);
+        add(b2);
+    
+        b2.addActionListener(new ActionListener(){
+            public void actionPerformed(ActionEvent ae){
+    setVisible(false);
+            }
+  });
+        
+        
+  setSize(860,600);
+        setLocation(500,220);
+  setVisible(true);
+    
+    }
+}
