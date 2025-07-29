@@ -144,3 +144,45 @@ public class ViewBookedCab extends JFrame {
     JLabel l11 = new JLabel();
     l11.setBounds(271, 470, 200, 14);
     contentPane.add(l11);
+
+    Conn c = new Conn();
+                try{
+
+                    ResultSet rs = c.s.executeQuery("select * from intraCab where username = '"+username+"'");
+                    while(rs.next()){
+                        l2.setText(rs.getString(2));
+                        l3.setText(rs.getString(3));
+                        l4.setText(rs.getString(4));
+                        l5.setText(rs.getString(5));
+                        l9.setText(rs.getString(6));
+                        l11.setText(rs.getString(7));
+                    }
+                    rs = c.s.executeQuery("select * from customer where username = '"+username+"'");
+                    while(rs.next()){
+                        l1.setText(rs.getString("name"));
+                        l6.setText(rs.getString("id_type") + " (" + rs.getString("number") + ")");
+                        l7.setText(rs.getString("phone"));
+                        l8.setText(rs.getString("address"));
+                    }
+                    
+                    Random r = new Random();
+                    l10.setText(Math.abs((r.nextInt() % 10)) + " mins");
+                    
+                    rs.close();
+                }catch(SQLException e){}
+
+    
+    JButton btnExit = new JButton("Back");
+    btnExit.addActionListener(new ActionListener() {
+      public void actionPerformed(ActionEvent e) {
+                            setVisible(false);
+      }
+    }); 
+    btnExit.setBounds(120, 510, 120, 30);
+                btnExit.setBackground(Color.BLACK);
+                btnExit.setForeground(Color.WHITE);
+    contentPane.add(btnExit);
+                
+                getContentPane().setBackground(Color.WHITE);
+  }
+}
