@@ -57,3 +57,18 @@ public class Home extends JFrame {
 
         mi7.addActionListener(ae -> new BookCab(username).setVisible(true));
         mi5.addActionListener(ae -> new ViewBookedCab(username).setVisible(true));
+        JMenu m3 = new JMenu("BOOK INTERCITY CAB");
+        m3.setForeground(Color.BLUE);
+        menuBar.add(m3);
+
+        JMenuItem mi8 = new JMenuItem("VIEW CABS");
+        JMenuItem mi9 = new JMenuItem("BOOK CAB");
+        JMenuItem mi10 = new JMenuItem("VIEW BOOKED CAB");
+
+        m3.add(mi8);
+        m3.add(mi9);
+        m3.add(mi10);
+
+        mi8.addActionListener(ae -> new ViewCabs().setVisible(true));
+        mi9.addActionListener(ae -> new BookIntercityCab(username).setVisible(true));
+        mi10.addActionListener(ae -> new ViewInterCityBookedCab(username).setVisible(true));
