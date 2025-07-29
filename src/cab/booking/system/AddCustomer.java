@@ -18,4 +18,13 @@ public class AddCustomer extends JFrame {
         JComboBox comboBox;
         JRadioButton r1,r2;
         Choice c1;
-	
+	/**
+	 * Launch the application.
+	 */
+	public static void main(String[] args) {
+		EventQueue.invokeLater(new Runnable() {
+			public void run() {
+				try {
+					AddCustomer frame = new AddCustomer("");
+					frame.setVisible(true);
+				} catch (Exception e) {
