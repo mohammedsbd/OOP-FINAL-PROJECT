@@ -88,5 +88,13 @@ public class AddCustomer extends JFrame {
 		contentPane.add(t2);
 		t2.setColumns(10);
 
-
-        
+                
+		JLabel lblGender = new JLabel("Gender :");
+		lblGender.setBounds(35, 230, 200, 14);
+		contentPane.add(lblGender);
+                
+                r1 = new JRadioButton("Male");
+                r1.setFont(new Font("Raleway", Font.BOLD, 14));
+                r1.setBackground(Color.WHITE);
+                r1.setBounds(271, 230, 80, 12);
+                add(r1);
