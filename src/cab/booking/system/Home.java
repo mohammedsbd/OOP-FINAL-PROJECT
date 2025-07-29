@@ -26,3 +26,5 @@ public class Home extends JFrame {
         l1.setFont(new Font("Tahoma", Font.PLAIN, 55));
         l1.setBounds(780, 60, 1000, 100);
         NewLabel.add(l1);
+        JMenuBar menuBar = new JMenuBar();
+        setJMenuBar(menuBar);
