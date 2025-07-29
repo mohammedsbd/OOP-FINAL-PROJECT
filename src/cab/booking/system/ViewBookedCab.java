@@ -119,3 +119,28 @@ public class ViewBookedCab extends JFrame {
                 JLabel l8 = new JLabel();
     l8.setBounds(271, 350, 200, 14);
     contentPane.add(l8);
+
+
+    JLabel lblDeposite = new JLabel("Price :");
+    lblDeposite.setBounds(35, 390, 200, 14);
+    contentPane.add(lblDeposite);
+    
+    JLabel l9 = new JLabel();
+    l9.setBounds(271, 390, 200, 14);
+    contentPane.add(l9);
+                
+                JLabel la2 = new JLabel("Arriving-In :");
+    la2.setBounds(35, 430, 200, 14);
+    contentPane.add(la2);
+    
+    JLabel l10 = new JLabel();
+    l10.setBounds(271, 430, 200, 14);
+    contentPane.add(l10);
+                
+                JLabel la3 = new JLabel("Reference Number :");
+    la3.setBounds(35, 470, 200, 14);
+    contentPane.add(la3);
+    
+    JLabel l11 = new JLabel();
+    l11.setBounds(271, 470, 200, 14);
+    contentPane.add(l11);
