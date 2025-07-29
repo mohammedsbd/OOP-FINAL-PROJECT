@@ -14,3 +14,6 @@ public class BookIntercityCab extends JFrame{
     JButton show, b1, b2;
     Choice c1, c2;
 }
+public static void main(String[] args){
+        new BookIntercityCab("");
+    }
