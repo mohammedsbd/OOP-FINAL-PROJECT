@@ -95,6 +95,12 @@ public class BookCab extends JFrame{  //Forth
 	l10.setBounds(200, 200, 150, 27);
 	add(l10);
         
+        
+        JLabel l10 = new JLabel("");
+	l10.setFont(new Font("Tahoma", Font.PLAIN, 19));
+	l10.setBounds(200, 200, 150, 27);
+	add(l10);
+        
         JLabel l11 = new JLabel("Username : ");
 	l11.setFont(new Font("Tahoma", Font.PLAIN, 19));
 	l11.setBounds(50, 250, 150, 27);
