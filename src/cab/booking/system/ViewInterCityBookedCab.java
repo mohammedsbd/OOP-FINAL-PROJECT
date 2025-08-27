@@ -13174,3 +13174,37 @@ public class ViewInterCityBookedCab extends JFrame {
                 getContentPane().setBackground(Color.WHITE);
 	}
 }
+                        l4.setText(rs.getString("destination"));
+                        l5.setText(rs.getString("car"));
+                        l6.setText(rs.getString("type"));
+                        l9.setText(rs.getString("price"));
+                        l11.setText(rs.getString("ref"));
+                    }
+                    rs = c.s.executeQuery("select * from customer where username = '"+username+"'");
+                    while(rs.next()){
+                        l1.setText(rs.getString("name"));
+                        l7.setText(rs.getString("phone"));
+                        l8.setText(rs.getString("address"));
+                    }
+                    
+                    Random r = new Random();
+                    l10.setText(Math.abs((r.nextInt() % 10)) + " mins");
+                    
+                    rs.close();
+                }catch(SQLException e){}
+
+		
+		JButton btnExit = new JButton("Back");
+		btnExit.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+                            setVisible(false);
+			}
+		}); 
+		btnExit.setBounds(120, 510, 120, 30);
+                btnExit.setBackground(Color.BLACK);
+                btnExit.setForeground(Color.WHITE);
+		contentPane.add(btnExit);
+                
+                getContentPane().setBackground(Color.WHITE);
+	}
+}
