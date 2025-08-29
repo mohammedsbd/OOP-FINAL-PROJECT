@@ -129863,6 +129863,18 @@ public class ViewCustomer extends JFrame {
 		contentPane.add(l6);
                 
                 getContentPane().setBackground(Color.WHITE);
+		l4.setBounds(620, 15, 90, 14);
+		contentPane.add(l4);
+                
+                JLabel l5 = new JLabel("Phone");
+		l5.setBounds(720, 15, 90, 14);
+		contentPane.add(l5);
+                
+                JLabel l6 = new JLabel("Email");
+		l6.setBounds(820, 15, 90, 14);
+		contentPane.add(l6);
+                
+                getContentPane().setBackground(Color.WHITE);
 	}
                 
                 getContentPane().setBackground(Color.WHITE);
